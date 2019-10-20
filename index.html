@@ -55,7 +55,7 @@
           var lines = document.getElementById('er13').value.split('\n')
         lines.forEach(function(el) {
           var gg = el.split(',');
-          data.addRow(gg);
+          data.addRow([ gg[0], new Date(gg[1]), new Date(gg[2]) ]);
         });
         
         if (window.chart === undefined)
